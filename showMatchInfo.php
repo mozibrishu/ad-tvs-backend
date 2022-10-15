@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Information</title>
+    <title>Match Information</title>
     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <style>
         h1 {
@@ -18,6 +18,10 @@
             border-collapse: collapse;
             width: 95%;
             margin: 0 auto;
+            /* padding: 5px; */
+        }
+        .dataTables_wrapper{
+            padding: 10px;
         }
 
         td,
@@ -53,21 +57,23 @@
     if (!$db) {
         echo $db->lastErrorMsg();
     }
-    echo "<h1>User Information</h1>
+    echo "<h1>Match Information</h1>
 <table class='myTable'>
     <thead><tr>
-        <th>NAME</th>
-        <th>EMAIL</th>
-        <th>MOBILE</th>
-        <th>DIVISION</th>
+        <th>Match ID</th>
+        <th>Team1</th>
+        <th>Team1 Vote</th>
+        <th>Team2</th>
+        <th>Team2 Vote</th>
       </tr><thead><tbody>";
     $ret = $db->query('SELECT * FROM matchInfo');
     while ($row = $ret->fetchArray()) {
         echo "<tr>
-        <td>{$row['NAME']}</td>
-        <td>{$row['EMAIL']}</td>
-        <td>{$row['MOBILE']}</td>
-        <td>{$row['DIVISION']}</td>
+        <td>{$row['MATCH_ID']}</td>
+        <td>{$row['TEAM1']}</td>
+        <td>{$row['TEAM1_VOTE']}</td>
+        <td>{$row['TEAM2']}</td>
+        <td>{$row['TEAM2_VOTE']}</td>
       </tr>";
     }
     echo "</tbody></table>";

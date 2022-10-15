@@ -30,22 +30,22 @@ if(!$ret){
 }else{
   echo 'tableOkay';
 }
-// $ret = $db->query('SELECT * FROM peoplesInfo');
-// $uniqueNumber = true;
-// while ($row = $ret->fetchArray()) {
-//   if($mobile == $row['MOBILE']){
-//     $uniqueNumber = false;
-//   }
-// }
 
 
-$matchId = 2020202020;
+$matchId = 3030202020;
 $team1 = 'Bangladesh';
-$team2 = 'Pakistan';
-$team1_vote = 1000;
-$team2_vote = 500;
+$team2 = 'New Zealand';
+$team1_vote = 1600;
+$team2_vote = 1900;
 
+$ret = $db->query('SELECT * FROM matchInfo');
 $uniqueNumber = true;
+while ($row = $ret->fetchArray()) {
+  if($matchId == $row['MATCH_ID']){
+    $uniqueNumber = false;
+  }
+}
+
 if($uniqueNumber){
   $sql ="INSERT INTO matchInfo (MATCH_ID,TEAM1,TEAM2,TEAM1_VOTE,TEAM2_VOTE) VALUES ('$matchId','$team1', '$team2', '$team1_vote','$team2_vote')";
 
