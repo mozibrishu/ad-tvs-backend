@@ -32,11 +32,11 @@ if(!$ret){
 }
 
 
-$matchId = 1010202020;
-$team1 = 'বাংলাদেশ';
-$team2 = 'পাকিস্তান';
-$team1_vote = 0;
-$team2_vote = 0;
+$matchId = 9010101010;
+$team1 = 'India';
+$team2 = 'Pakistan';
+$team1_vote = 1;
+$team2_vote = 1;
 
 $ret = $db->query('SELECT * FROM matchInfo');
 $uniqueNumber = true;
