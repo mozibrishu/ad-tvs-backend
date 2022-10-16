@@ -32,9 +32,9 @@ if(!$ret){
 }
 
 
-$matchId = 4040202020;
-$team1 = 'Bangladesh';
-$team2 = 'New Zealand';
+$matchId = 1010202020;
+$team1 = 'বাংলাদেশ';
+$team2 = 'পাকিস্তান';
 $team1_vote = 0;
 $team2_vote = 0;
 
