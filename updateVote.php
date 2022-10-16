@@ -1,9 +1,7 @@
 <?php header('Access-Control-Allow-Origin: *'); ?>
 <?php
-// $matchId = $_POST['MATCH_ID'];
+$matchId = $_POST['MATCH_ID'];
 $TEAM_VOTE = $_POST['TEAM_VOTE'];
-$matchId = 9010101010	;
-
 
 class SQLiteDB extends SQLite3
 {

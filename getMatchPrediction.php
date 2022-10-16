@@ -1,8 +1,6 @@
 <?php header('Access-Control-Allow-Origin: *'); ?>
 <?php
-// $matchId = $_POST['MATCH_ID'];
-$matchId = 9010101010	;
-
+$matchId = $_POST['MATCH_ID'];
 
 class SQLiteDB extends SQLite3
 {
