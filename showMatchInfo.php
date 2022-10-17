@@ -58,6 +58,7 @@
         echo $db->lastErrorMsg();
     }
     echo "<h1>Match Information</h1>
+    <a href='http://localhost/ad-tvs-backend/admin/insert.html' style = 'text-decoration: none; background-color: teal; padding: 10px 15px;color:white; border-radius: 10px;'>Add New Match</a>
 <table class='myTable'>
     <thead><tr>
         <th>Match ID</th>
